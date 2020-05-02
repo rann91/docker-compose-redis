@@ -4,6 +4,7 @@ services:
   server:
     container_name: redis_server
     image: redis
+    restart: always
     command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
     ports:
       - 6379:6379
